@@ -44,6 +44,4 @@ We have integrated GitHub Actions in our project to automate various stages of o
 
 By leveraging these automated workflows, we ensure a robust and reliable codebase, streamline our development process, and deliver a better experience to our end-users.
 
-```
-
-```
+---
