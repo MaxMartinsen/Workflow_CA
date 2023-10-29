@@ -45,3 +45,13 @@ We have integrated GitHub Actions in our project to automate various stages of o
 By leveraging these automated workflows, we ensure a robust and reliable codebase, streamline our development process, and deliver a better experience to our end-users.
 
 ---
+
+## Configuring Jest
+
+Jest is a delightful JavaScript testing framework that focuses on simplicity. It works out of the box and is easily configurable to meet your project’s requirements.
+
+## Configuring Cypress
+
+Cypress provides a fast, easy, and reliable way to test anything that runs in a browser. It’s a complete end-to-end testing framework.
+
+---
