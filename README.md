@@ -31,3 +31,19 @@ npx husky-init && npm install
 ```
 
 ---
+
+## GitHub Actions Integration
+
+We have integrated GitHub Actions in our project to automate various stages of our development workflow. This ensures consistency, faster iterations, and higher code quality. Below are the key workflows we have set up:
+
+1. **Automated Unit Testing (`unit-test.yml`)**: This workflow runs all the unit tests in our project every time a push or pull request is made. It ensures that new changes do not break existing functionality.
+
+2. **Automated E2E Testing (`e2e-test.yml`)**: End-to-End tests are run to verify the application behaves as expected from a user’s perspective. This workflow helps in catching issues that might not be covered by unit tests.
+
+3. **Static Content Deployment (`static.yml`)**: Our static content is automatically built and deployed to GitHub Pages, ensuring that the latest version of our site is always available to users.
+
+By leveraging these automated workflows, we ensure a robust and reliable codebase, streamline our development process, and deliver a better experience to our end-users.
+
+```
+
+```
