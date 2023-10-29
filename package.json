@@ -8,6 +8,7 @@
     "start": "sass --watch src/scss:dist/css & live-server",
     "lint": "eslint src/**/*.js",
     "lint-fix": "eslint src/**/*.js --cache --fix",
+    "format": "eslint src/**/*.js",
     "prepare": "husky install"
   },
   "keywords": [],
