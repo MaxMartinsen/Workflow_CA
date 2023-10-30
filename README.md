@@ -2,6 +2,22 @@
 
 ---
 
+[![Automated E2E Testing](https://github.com/MaxMartinsen/Workflow_CA/actions/workflows/e2e-test.yml/badge.svg)](https://github.com/MaxMartinsen/Workflow_CA/actions/workflows/e2e-test.yml)
+
+---
+
+[![Automated Unit Testing](https://github.com/MaxMartinsen/Workflow_CA/actions/workflows/unit-test.yml/badge.svg)](https://github.com/MaxMartinsen/Workflow_CA/actions/workflows/unit-test.yml)
+
+---
+
+[![Deploy static content to Pages](https://github.com/MaxMartinsen/Workflow_CA/actions/workflows/pages.yml/badge.svg)](https://github.com/MaxMartinsen/Workflow_CA/actions/workflows/pages.yml)
+
+---
+
+[![Code Review](https://github.com/MaxMartinsen/Workflow_CA/actions/workflows/gpt.yml/badge.svg)](https://github.com/MaxMartinsen/Workflow_CA/actions/workflows/gpt.yml)
+
+---
+
 ## Code Quality and Commit Hooks
 
 ### ESLint & Prettier
