@@ -40,6 +40,14 @@ npm run format
 
 Using Husky, we've set up pre-commit hooks to run our linting and formatting tools on staged files. This ensures all committed code adheres to our quality standards.
 
+To add a pre-commit hook that will trigger lint-staged. Make sure you've run "npm run prepare" at least once before to set up husky hooks.
+
+```bash
+npm run prepare
+```
+
+After this setup, when you make a commit, husky should trigger lint-staged, which in turn will run Prettier and ESLint on the staged files as specified.
+
 ---
 
 ## GitHub Actions Integration
