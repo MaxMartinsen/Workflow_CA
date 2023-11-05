@@ -1,0 +1,50 @@
+name: CI/CD Pipeline with 404 Check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build
+
+      # If testing locally within the CI environment:
+      - name: Install Static Server
+        run: npm install -g http-server
+
+      - name: Serve the Site
+        run: http-server ./dist -p 8080 &
+        shell: bash
+
+      - name: Check for 404 Errors Locally
+        run: npx linkchecker http://localhost:8080/ || true
+
+      # Deployment step goes here, if applicable
+
+      # If testing the GitHub Pages deployment:
+      - name: Construct GitHub Pages URL
+        id: gh-pages-url
+        run: echo "GH_PAGES_URL=https://$(echo ${{ github.repository }} | awk -F '/' '{print tolower($1)}').github.io/${GITHUB_REPOSITORY#*/}/" >> $GITHUB_ENV
+
+      - name: Check for 404 Errors on GitHub Pages
+        run: |
+          echo "Wait for GitHub Pages to be updated..."
+          sleep 60 # Waits for 60 seconds
+          npx linkchecker ${{ env.GH_PAGES_URL }} || true
+        if: always() # This ensures the step runs even if previous steps failed
