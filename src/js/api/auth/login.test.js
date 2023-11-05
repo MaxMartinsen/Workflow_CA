@@ -1,7 +1,6 @@
 // Import the function to test
 import { login } from "./login";
 
-// Mock for localStorage
 const localStorageMock = (() => {
   let store = {};
   return {
@@ -9,7 +8,7 @@ const localStorageMock = (() => {
       return store[key] || null;
     },
     setItem(key, value) {
-      store[key] = value.toString();
+      store[key] = String(value);
     },
     removeItem(key) {
       delete store[key];
@@ -19,6 +18,7 @@ const localStorageMock = (() => {
     }
   };
 })();
+
 
 // Set up the global environment for localStorage
 Object.defineProperty(globalThis, 'localStorage', { value: localStorageMock });
@@ -57,6 +57,10 @@ describe('login', () => {
 
     // Assert that the email returned matches the mock
     expect(profile.email).toBe('test@noroff.no');
+
+    // Assert that the token was stored in localStorage
+    expect(localStorage.getItem('token')).toBe('"test-token"');
+
   });
 
   it('should throw an error with response status text on failed login', async () => {
