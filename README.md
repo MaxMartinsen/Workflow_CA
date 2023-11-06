@@ -116,7 +116,7 @@ The file `register.test.js` contains unit tests for the user registration proces
 
 These tests also use "fetch" mocks and follow the same patterns as "login.test.js" to ensure that the application's logging flow is robust and handles both success and failure cases gracefully.
 
-####3. `logout.test.js`
+### 3. `logout.test.js`
 
 The logout.test.js file contains unit tests for the logout function. Tests confirm that:
 
