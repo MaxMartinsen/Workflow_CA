@@ -18,6 +18,51 @@
 
 ---
 
+## Deployment Instructions
+
+Deploying this project is straightforward and involves cloning the repository and setting up the environment. Follow these steps to get the project up and running on your local machine:
+
+### 1. Clone the Repository
+
+First, clone the repository from GitHub to your local machine:
+
+```bash
+git clone https://github.com/MaxMartinsen/Workflow_CA.git
+```
+
+This command will create a copy of the repository in your local directory.
+
+### 2. Install Dependencies
+
+Navigate to the cloned repository's directory and install the necessary dependencies:
+
+```bash
+cd Workflow_CA
+npm install
+```
+
+This will install all the dependencies defined in the project's `package.json` file.
+
+### 3. Environment Setup
+
+Ensure that your environment is set up with the necessary configurations. This may involve setting environment variables or configuring files as required by the project.
+
+### 4. Running the Application
+
+To start the application, run the following command in the project directory:
+
+```bash
+npm start
+```
+
+This will launch the application. Follow any additional instructions specific to the project to access and use the application.
+
+### 5. Accessing the Application
+
+Once the application is running, you can access it through a web browser. The default URL is usually `http://localhost:3000`, unless specified otherwise in the project configurations.
+
+---
+
 ## Code Quality and Commit Hooks
 
 ### ESLint & Prettier
